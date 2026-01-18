@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-
+#include <cmath>
 class Fixed {
 public:
 	Fixed();
@@ -18,4 +18,4 @@ private:
   int number;
   static const int fractional = 8;
 };
-
+std::ostream& operator<<(std::ostream& ostream, const Fixed &obj);
