@@ -12,7 +12,7 @@ std::cout << b << std::endl;
 std::cout << Fixed::max( a, b ) << std::endl;
 std::cout << "-------------------------------" << std::endl;
 std::cout << "min(a, b): " << Fixed::min(a, b) << std::endl;
-std::cout << "a / b: " << a / b << std::endl;
+std::cout << "b / a: " << b / a << std::endl;
 std::cout << "a - b: " << a - b << std::endl;
 std::cout << "a + b: " << a + b << std::endl;
 std::cout << "a + b: " << a + b << std::endl;

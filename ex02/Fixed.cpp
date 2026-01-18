@@ -39,7 +39,7 @@ void Fixed::setRawBits (int const raw)
 }
 float Fixed::toFloat( void ) const
 {
-	return (roundf(this->number) / (1 << this->fractional));
+	return (static_cast<float>(this->number) / (1 << this->fractional));
 }
 int Fixed::toInt( void ) const
 {
@@ -76,7 +76,7 @@ int Fixed::toInt( void ) const
 {
 	Fixed instance = *this;
 	long long numb = instance.number << instance.fractional;
-	instance.number = numb / obj.number;
+	instance.number = (numb / obj.number);
 	return(instance);
  }
 	Fixed& Fixed::operator++()
