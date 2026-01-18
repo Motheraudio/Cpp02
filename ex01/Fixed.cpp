@@ -43,7 +43,6 @@ float Fixed::toFloat( void ) const
 }
 int Fixed::toInt( void ) const
 {
-
 	return (this->number >> this->fractional);
 }
 std::ostream& operator<<(std::ostream& ostream, const Fixed &obj)
