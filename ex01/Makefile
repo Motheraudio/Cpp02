@@ -73,10 +73,10 @@ SRCS = main.cpp Fixed.cpp
 OBJECTS = ${SRCS:.cpp=.o}
 OBJDIR = obj
 OBJECTFILES = $(addprefix $(OBJDIR)/, $(OBJECTS))
-HEADERS = ${SRCS:.cpp=.d}
+HEADERS = Fixed.hpp
 CXX = c++
-CXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
-$(OBJDIR)/%.o: %.cpp
+CXFLAGS = -Wall -Wextra -Werror -std=c++98
+$(OBJDIR)/%.o: %.cpp $(HEADERS)
 	@mkdir -p $(OBJDIR)
 	@$(CXX) $(CXFLAGS) -c $< -o $@
 
@@ -94,5 +94,4 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
--include $(HEADERS)
 .PHONY: all clean fclean re
